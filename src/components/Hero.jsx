@@ -1,11 +1,14 @@
 import Dashboard from "./Dashboard";
 import SearchBar from "./SearchBar";
 import { useState, useEffect } from "react";
-import axios from "axios"
+import axios from "axios";
+import { useOutletContext } from "react-router-dom";
 
 const Hero = () => {
   const [filteredData, setFilteredData] = useState([]);
-  const [responseData, setResponseData] = useState([]);
+  const [responseData, setResponseData] = useOutletContext();
+
+  console.log(responseData)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,7 +28,7 @@ const Hero = () => {
     // Handle the search and region filtering
     const searchQuery = data.search.toLowerCase();
     const selectedRegion = data.region.toLowerCase();
-    console.log(selectedRegion)
+    console.log(selectedRegion);
 
     const filteredCountries = responseData.filter((country) => {
       const countryName = country.name.toLowerCase();

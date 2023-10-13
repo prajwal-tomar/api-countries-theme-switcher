@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
+  const [responseData, setResponseData] = useState([]);
 
   useEffect(() => {
     if (theme === "dark") {
@@ -16,7 +17,7 @@ const App = () => {
   return (
     <div className="min-h-screen w-full font-nunito bg-very-light-gray-bg dark:bg-very-dark-blue-bg">
       <Navbar theme={theme} setTheme={setTheme} />
-      <Hero />
+      <Outlet context={[responseData, setResponseData]} />
     </div>
   );
 };
