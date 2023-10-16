@@ -13,7 +13,7 @@ const Hero = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5173/data.json");
+        const response = await axios.get("https://api-countries-theme-switcher.vercel.app/data.json");
         setResponseData(response.data);
         setFilteredData(response.data);
       } catch (error) {
