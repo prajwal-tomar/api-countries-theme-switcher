@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 const Dashboard = ({ filteredData }) => {
   return (
     <main className="mt-5">
-      <div className="flex flex-wrap justify-center mx-20">
+      <div className="flex flex-wrap justify-center md:mx-20">
         {filteredData.map((country, index) => (
           <Link to={`/country/${index}`}>
             <div
               key={index}
-              className=" transition ease-in-out delay-150 card dark:bg-dark-blue shadow-lg w-64 h-80 bg-white rounded-lg flex flex-col m-16 hover:shadow-xl hover:scale-105"
+              className=" transition ease-in-out delay-150 card dark:bg-dark-blue shadow-lg w-64 h-80 bg-white rounded-lg flex flex-col md:m-16 m-5 hover:shadow-xl hover:scale-105"
             >
               <img
                 src={country.flags.png}

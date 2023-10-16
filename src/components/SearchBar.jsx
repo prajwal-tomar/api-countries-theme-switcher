@@ -7,7 +7,7 @@ const SearchBar = ({ onSubmit }) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex md:flex-row md:justify-between justify-center items-start md:px-20 px-10 flex-col"
+      className="flex md:flex-row md:justify-between md:px-20 px-5 flex-col mt-10"
     >
       <div className="flex items-center text-gray-600 mb-4">
         <Controller
@@ -18,7 +18,7 @@ const SearchBar = ({ onSubmit }) => {
             <input
               {...field}
               type="text"
-              className="w-[26rem] rounded-lg p-4 focus:outline-none shadow-md"
+              className="w-[26rem] rounded-lg p-4 focus:outline-none shadow-md dark:bg-dark-blue dark:text-white"
               placeholder="Search for a country..."
             />
           )}
@@ -35,7 +35,7 @@ const SearchBar = ({ onSubmit }) => {
           render={({ field }) => (
             <select
               {...field}
-              className="w-[12rem] rounded-lg p-4 focus:outline-none shadow-md text-bold"
+              className="w-[12rem] rounded-lg p-4 dark:text-white focus:outline-none shadow-md text-bold dark:bg-dark-blue"
             >
               <option value="">Filter by Region</option>
               <option value="Africa">Africa</option>

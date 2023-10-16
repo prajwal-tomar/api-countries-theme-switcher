@@ -7,8 +7,8 @@ const Navbar = ({ theme, setTheme }) => {
   };
 
   return (
-    <nav className="py-4 shadow-lg flex items-center justify-between px-20 bg-white mb-10 dark:bg-dark-blue">
-      <h1 className="font-bold text-xl dark:text-white">Where in the world?</h1>
+    <nav className="md:py-4 py-8 shadow-lg flex items-center justify-between md:px-20 px-5 bg-white dark:bg-dark-blue">
+      <h1 className="font-bold md:text-xl text-sm dark:text-white">Where in the world?</h1>
       <div className="flex items-center space-x-2">
         {theme === "light" ? (
           <img
@@ -27,7 +27,7 @@ const Navbar = ({ theme, setTheme }) => {
           />
         )}
 
-        <h1 className="font-semibold dark:text-white">Dark Mode</h1>
+        <h1 className="font-semibold dark:text-white md:text-md text-sm">Dark Mode</h1>
       </div>
     </nav>
   );

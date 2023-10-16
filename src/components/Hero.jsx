@@ -46,7 +46,7 @@ const Hero = () => {
 
   return (
     <div className="flex flex-col">
-      <SearchBar onSubmit={onSubmit} />
+      <SearchBar onSubmit={onSubmit}/>
       <Dashboard
         responseData={responseData}
         setResponseData={setResponseData}
